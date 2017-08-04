@@ -1,0 +1,7 @@
+<h4>체크한 항목 수: {{checkedResult.length}}</h4>
+<h4>체크한 항목:</h4>
+<ul>
+  <li *ngFor="let item of checkedResult; let idx = index">
+    {{item}} <button (click)="onRemove(idx)">x</button>
+  </li>
+</ul>
