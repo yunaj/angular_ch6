@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CheckListComponent } from './check-list/check-list.component';
 import { CheckListResultComponent } from './check-list/check-list-result/check-list-result.component';
+import { CheckListDataService } from './check-list/check-list-data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { CheckListResultComponent } from './check-list/check-list-result/check-l
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CheckListDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
