@@ -21,8 +21,13 @@ export class CheckListComponent implements OnInit {
   }
 
   onChecked(isChecked, checkedItem: CheckItem) {
-    checkedItem.isChecked = isChecked
-    this.curCheckedItem = checkedItem;
+    checkedItem.isChecked = isChecked 
+    // if(this.curCheckedItem){
+    //   alert("curCheckedItem - index : " + this.curCheckedItem.idx + " isChecked : " + this.curCheckedItem.isChecked);
+    // }
+    // alert("checkedItem - index : " + checkedItem.idx + " isChecked : " + checkedItem.isChecked);
+
+    this.curCheckedItem = checkedItem;//???? 왜 curCheckedItem 사용?
     this.checkListDataService.checkItem(checkedItem);
   }
 
